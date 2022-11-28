@@ -31,7 +31,7 @@ class OnboardingView extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    return ViewModelBuilder.reactive(
+    return ViewModelBuilder<OnboardingViewModel>.reactive(
       viewModelBuilder: () => OnboardingViewModel(),
       builder: (context, viewModel, child) => SafeArea(
         child: SingleChildScrollView(
@@ -117,8 +117,8 @@ class OnboardingView extends StatelessWidget {
                     child: HotButton(
                       buttonHeight: 50,
                       onPressed: () {
-//                       viewModel.onboarding();
-                        onboarding();
+                        viewModel.gotoSignIn();
+                        //print('i was clicked');
                       },
                       buttonText: 'Let’s get you started',
                     ),

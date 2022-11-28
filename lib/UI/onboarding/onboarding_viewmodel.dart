@@ -1,12 +1,11 @@
 import 'package:stacked/stacked.dart';
-import '../../model/onboarding_model.dart';
+import 'package:stacked_services/stacked_services.dart';
+import '../../app/app.locator.dart';
+import '../../app/app.router.dart';
 
 class OnboardingViewModel extends BaseViewModel {
-  int onboarding() {
-    int i = 0;
-    for (i; i < onBoardingList.length; i++) {
-      print(i);
-    }
-    return i;
+  final _navigationService = locator<NavigationService>();
+  void gotoSignIn() {
+    _navigationService.navigateTo(Routes.signInView);
   }
 }

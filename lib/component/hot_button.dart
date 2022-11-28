@@ -5,7 +5,10 @@ class HotButton extends StatelessWidget {
   VoidCallback onPressed;
   String buttonText;
   double buttonHeight;
-  HotButton({required this.onPressed, required this.buttonText, required this.buttonHeight});
+  HotButton(
+      {required this.onPressed,
+      required this.buttonText,
+      required this.buttonHeight});
   Widget build(BuildContext context) {
     return SizedBox(
       height: buttonHeight,

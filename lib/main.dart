@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'UI/onboarding/onboarding_view.dart';
+import 'app/app.locator.dart';
 
 void main() {
-  runApp(const MyApp());
+  setupLocator();
+  runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
 
   @override
   State<MyApp> createState() => _MyAppState();
